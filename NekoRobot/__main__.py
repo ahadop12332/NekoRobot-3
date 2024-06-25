@@ -138,7 +138,8 @@ buttons = [
     [
         InlineKeyboardButton(text="📓 Guidelines", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Music ", Callback="def Music_about_callback(update: Update, context: CallbackContext):
+            text="Music ", callback_data="help_back"),
+        InlineKeyboardButton(="def Music_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "Music_":
         query.message.edit_caption(f"""✿ ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ꜰᴏʀ ᴍᴜꜱɪᴄ ✿""",
@@ -271,16 +272,6 @@ buttons = [
                 ]
             ),
         )
-    elif query.data == "Music_back":
-        first_name = update.effective_user.first_name
-        query.message.edit_caption(PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-
-        )"
-        ),
-    ],
     [
         InlineKeyboardButton(
             text="🚑 Support", url=f"https://telegram.dog/{SUPPORT_CHAT}"
