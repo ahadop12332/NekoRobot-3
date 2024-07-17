@@ -28,31 +28,27 @@ from telethon import Button
 from NekoRobot import tbot
 from NekoRobot.events import register
 
-PHOTO = "https://telegra.ph/file/70061cba45ee824dad6f6.jpg"
+PHOTO = "https://telegra.ph/file/7d919874a37820d05fc75.jpg"
 
 
-@register(pattern=("/repo"))
+@register(pattern=("/credits"))
 async def awake(event):
     NEKO = """
-         We Are So Happy To Announce That We Have Public Our NekoRobot Repo. ✨🥀
+         This Bot was Made By Team X Apex. ✨🥀
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-「@NekoCuteBot」
+「@Dazai_proBot」
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-Here is the Repo Deploy your Own NekoRobot.
-⚜️Repo ➤ https://github.com/Awesome-Prince/NekoRobot-3.git
-➖➖➖➖➖➖➖➖➖➖➖➖➖
-🔰 Thanks for your support 
-It's Fully stable Repo so you can deploy and make own Bot.
+🔰 Thanks for your support
+Join Team X Apex. @TeamXaPEX
 ──────────────────
-Powered By:- @Besties_XD
 """
 
     BUTTON = [
         [
             Button.url(
-                "📢 Repository", "https://github.com/Awesome-Prince/NekoRobot-3"
+                "📢 Brothers", "https://t.me/apex_chats"
             ),
-            Button.url("💻 Collaborators", "https://telegra.ph/Neko-X-05-23"),
+            Button.url("💻 Owner", "https://Betluckers"),
         ]
     ]
     await tbot.send_file(event.chat_id, PHOTO, caption=NEKO, buttons=BUTTON)
