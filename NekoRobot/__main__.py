@@ -667,7 +667,7 @@ def donate(update: Update, context: CallbackContext) -> None:
             )
 
             update.effective_message.reply_text(
-                text="I'm free for everyone❤️\njust donate by subs channel, Don't forget to join the support group.",
+                text="I'm free for everyone\njust donate by subs channel, Don't forget to join the support group.",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
